@@ -4,6 +4,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
 
 class TensorflowFuntions extends StatefulWidget {
+  const TensorflowFuntions({Key? key}) : super(key: key);
+
   @override
   _TensorflowState createState() => _TensorflowState();
 }
@@ -81,7 +83,7 @@ class _TensorflowState extends State<TensorflowFuntions> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Tensorflow Lite",
           style: TextStyle(color: Colors.white, fontSize: 25),
         ),
@@ -94,12 +96,12 @@ class _TensorflowState extends State<TensorflowFuntions> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             _loading
-                ? Container(
+                ? const SizedBox(
                     height: 300,
                     width: 300,
                   )
                 : Container(
-                    margin: EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
                     width: MediaQuery.of(context).size.width,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -107,7 +109,7 @@ class _TensorflowState extends State<TensorflowFuntions> {
                       children: <Widget>[
                         _image == null
                             ? Container()
-                            : Container(
+                            : SizedBox(
                                 height: 300,
                                 child: Image.file(File(_image!.path))),
                         const SizedBox(
