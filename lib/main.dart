@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermlprediction/tensorflowfuntions.dart';
 import 'package:fluttermlprediction/ui.dart';
 
 void main() {
